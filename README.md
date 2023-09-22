@@ -1,6 +1,6 @@
 # Run instruction
 
-- Need nodejs latest and yarn
+- Need nodejs latest
 
 # Tutorial :
 - git clone https://github.com/EletrixtimeYT/quarko-deskop
