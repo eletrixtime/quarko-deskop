@@ -1,0 +1,37 @@
+<style>
+
+    body {
+
+    background-color: #2e2e2e;
+    color: #ffffff;
+
+    }
+
+  </style>
+<center>
+<image src="img/quarko_logo_normal.svg"></image>
+
+<h1>Trying to load html of Quarko</h1>
+<p>Note : Essayer de recharger la page si vous voyer pas les images !</p>
+
+<p id="error"></p> <!-- Ajout de l'élément <p> pour afficher les erreurs -->
+<footer><p>Created by EletrixTime</p></footer>
+<a href="https://discord.gg/GwGGquHDbF"><img src="img/discord_icon.webp" alt="DISCORD_ICON" width="50" height="50"></a>
+</center>
+<script>
+window.addEventListener('load', function() {
+    // Vous pouvez utiliser la méthode fetch pour récupérer le nouveau contenu depuis une URL
+    fetch('https://quarko.repl.co')
+        .then(response => response.text())
+        .then(data => {
+            // Remplacez le contenu du corps de la page avec le nouveau contenu
+            document.body.innerHTML = data;
+        })
+        .catch(error => {
+            // Affichez l'erreur dans l'élément <p> avec l'id "error"
+            const errorElement = document.getElementById('error');
+            errorElement.innerHTML = `ERROR: FAIL TO INJECT : ${error}`;
+            console.error(error);
+        });
+});
+</script>
